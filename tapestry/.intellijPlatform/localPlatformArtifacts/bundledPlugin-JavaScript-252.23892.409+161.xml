@@ -1,0 +1,29 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="JavaScript" revision="252.23892.409+161"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/home/ubuntu/.gradle/caches/8.9/transforms/3dd88313cf0c59a74f6170e87df5d1cf/transformed/ideaIU-2025.2/plugins/javascript-plugin" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.modules.ultimate" rev="252.23892.409+637"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="252.23892.409+788"/>
+    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="252.23892.409+967"/>
+    <dependency org="bundledPlugin" name="com.jetbrains.performancePlugin" rev="252.23892.409+140"/>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="252.23892.409+933"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="252.23892.409+467"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="252.23892.409+768"/>
+    <dependency org="bundledPlugin" name="tanvd.grazi" rev="252.23892.409+436"/>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.markdown" rev="252.23892.409+995"/>
+    <dependency org="bundledPlugin" name="training" rev="252.23892.409+780"/>
+    <dependency org="bundledPlugin" name="Git4Idea" rev="252.23892.409+521"/>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="252.23892.409+434"/>
+    <dependency org="bundledPlugin" name="com.intellij.diagram" rev="252.23892.409+792"/>
+    <dependency org="bundledPlugin" name="intellij.indexing.shared.core" rev="252.23892.409+434"/>
+    <dependency org="bundledPlugin" name="com.jetbrains.sh" rev="252.23892.409+575"/>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="252.23892.409+694"/>
+    <dependency org="bundledPlugin" name="JavaScriptDebugger" rev="252.23892.409+989"/>
+    <dependency org="bundledModule" name="intellij.indexing.shared.generator" rev="252.23892.409+710"/>
+  </dependencies>
+</ivy-module>

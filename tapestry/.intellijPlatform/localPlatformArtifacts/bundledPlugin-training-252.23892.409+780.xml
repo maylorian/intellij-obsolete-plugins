@@ -1,0 +1,18 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="training" revision="252.23892.409+780"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/home/ubuntu/.gradle/caches/8.9/transforms/3dd88313cf0c59a74f6170e87df5d1cf/transformed/ideaIU-2025.2/plugins/featuresTrainer" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="Git4Idea" rev="252.23892.409+521"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.kotlin" rev="252.23892.409-IJ+653"/>
+    <dependency org="bundledModule" name="intellij.platform.tips" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.platform.lvcs.impl" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.platform.ide.newUiOnboarding" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.platform.ide.newUsersOnboarding" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.java.featuresTrainer" rev="252.23892.409+710"/>
+  </dependencies>
+</ivy-module>

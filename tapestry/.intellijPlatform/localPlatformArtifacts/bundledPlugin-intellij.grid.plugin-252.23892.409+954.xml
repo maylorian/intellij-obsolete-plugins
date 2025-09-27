@@ -1,0 +1,20 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="intellij.grid.plugin" revision="252.23892.409+954"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/home/ubuntu/.gradle/caches/8.9/transforms/3dd88313cf0c59a74f6170e87df5d1cf/transformed/ideaIU-2025.2/plugins/grid-plugin" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.platform.images" rev="252.23892.409+158"/>
+    <dependency org="bundledModule" name="intellij.json.backend" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.grid.impl" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.grid.scripting.rt" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.grid.core.impl" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.grid.csv.core.impl" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.platform.navbar.frontend" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.libraries.microba" rev="252.23892.409+710"/>
+    <dependency org="bundledModule" name="intellij.charts" rev="252.23892.409+710"/>
+  </dependencies>
+</ivy-module>

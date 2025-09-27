@@ -1,0 +1,14 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="intellij.indexing.shared.core" revision="252.23892.409+434"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/home/ubuntu/.gradle/caches/8.9/transforms/3dd88313cf0c59a74f6170e87df5d1cf/transformed/ideaIU-2025.2/plugins/indexing-shared" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="252.23892.409+694"/>
+    <dependency org="bundledPlugin" name="com.jetbrains.performancePlugin" rev="252.23892.409+140"/>
+    <dependency org="bundledPlugin" name="com.intellij.configurationScript" rev="252.23892.409+499"/>
+  </dependencies>
+</ivy-module>

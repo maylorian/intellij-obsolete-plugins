@@ -1,6 +1,5 @@
 package com.intellij.tapestry.intellij.lang.reference;
 
-import com.intellij.lang.properties.references.PropertyReference;
 import com.intellij.openapi.paths.PathReferenceManager;
 import com.intellij.openapi.util.Key;
 import com.intellij.openapi.util.TextRange;
@@ -90,8 +89,14 @@ public class TapestryReferenceContributor extends PsiReferenceContributor {
           if (value.startsWith(prefix)) {
             final String key = value.substring(prefix.length());
             final int valueStart = prefix.length() + 1;
+            final TextRange range = new TextRange(valueStart, valueStart + key.length());
             return new PsiReference[] {
-              new PropertyReference(key, element, null, true, new TextRange(valueStart, valueStart + key.length()))
+              new PsiReferenceBase<PsiElement>(element, range) {
+                @Override
+                public @Nullable PsiElement resolve() {
+                  return null;
+                }
+              }
             };
           }
           return PsiReference.EMPTY_ARRAY;
@@ -255,5 +260,4 @@ public class TapestryReferenceContributor extends PsiReferenceContributor {
       }
     }};
   }
-
 }
