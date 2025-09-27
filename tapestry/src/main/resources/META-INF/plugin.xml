@@ -57,14 +57,7 @@
     <codeInsight.parameterInfo language="TML" implementationClass="com.intellij.codeInsight.hint.api.impls.XmlParameterInfoHandler"/>
     <lang.psiStructureViewFactory language="TML" implementationClass="com.intellij.lang.xml.XmlStructureViewBuilderFactory"/>
 
-    <facet.toolWindow id="Tapestry"
-                      facetIdList="tapestry"
-                      anchor="bottom"
-                      secondary="false"
-                      icon="TapestryIcons.TapestryToolWindow"
-                      factoryClass="com.intellij.tapestry.intellij.toolwindow.TapestryToolWindowFactory"/>
-
-    <projectViewPane implementation="com.intellij.tapestry.intellij.view.TapestryProjectViewPane"/>
+    <!-- project toolwindow and custom project view are removed for compatibility with 2025.2 -->
 
     <localInspection language="TEL" shortName="TelReferencesInspection" bundle="messages.TapestryBundle" key="tel.references.inspection"
                      groupKey="tapestry.inspections.group" enabledByDefault="true" level="WARNING"
@@ -76,14 +69,8 @@
   <actions>
     <action class="com.intellij.tapestry.intellij.actions.navigation.ClassTemplateNavigation"
             id="ClassTemplateNavigation" text="Class &lt;-&gt; Template Navigation"
-            description="Navigate from a class to it's corresponding template and vice-versa.">
+            description="Navigate between class and TML template.">
       <keyboard-shortcut first-keystroke="control shift G" keymap="$default"/>
-    </action>
-
-    <action class="com.intellij.tapestry.intellij.actions.navigation.TagDocumentationNavigation"
-            id="TagDocumentationNavigation" text="Tag to Documentation Navigation"
-            description="Navigate from a tag to it's corresponding documentation.">
-      <keyboard-shortcut first-keystroke="control shift D" keymap="$default"/>
     </action>
 
     <group id="GoToTapestryTemplate"
@@ -100,20 +87,6 @@
         <keyboard-shortcut first-keystroke="control shift G" keymap="$default"/>
       </action>
       <add-to-group group-id="EditorPopupMenu.GoTo" anchor="last"/>
-    </group>
-
-    <group id="TapestryGroup" popup="true" text="Tapestry" class="com.intellij.ide.actions.NonTrivialActionGroup">
-      <separator/>
-      <action id="AddNewPageAction"
-              class="com.intellij.tapestry.intellij.actions.createnew.AddNewPageAction"
-              text="Page" description="Add a new page."/>
-      <action id="AddNewComponentAction"
-              class="com.intellij.tapestry.intellij.actions.createnew.AddNewComponentAction"
-              text="Component" description="Add a new component."/>
-      <action id="AddNewMixinAction"
-              class="com.intellij.tapestry.intellij.actions.createnew.AddNewMixinAction"
-              text="Mixin" description="Add a new mixin."/>
-      <add-to-group group-id="NewGroup" relative-to-action="NewAction" anchor="after"/>
     </group>
   </actions>
 

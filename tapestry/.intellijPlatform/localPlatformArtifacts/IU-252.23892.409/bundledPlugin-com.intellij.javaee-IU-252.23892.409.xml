@@ -1,0 +1,21 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.javaee" revision="IU-252.23892.409"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="javaee-rt" ext="jar" conf="default" url="plugins/JavaEE/lib"/>
+    <artifact name="javaee-openapi" ext="jar" conf="default" url="plugins/JavaEE/lib"/>
+    <artifact name="jasper-v2-rt" ext="jar" conf="default" url="plugins/JavaEE/lib"/>
+    <artifact name="javaee-platform" ext="jar" conf="default" url="plugins/JavaEE/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.spellchecker" rev="IU-252.23892.409"/>
+    <dependency org="bundledModule" name="intellij.properties.backend" rev="IU-252.23892.409"/>
+    <dependency org="bundledModule" name="intellij.properties.backend.psi" rev="IU-252.23892.409"/>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="IU-252.23892.409"/>
+    <dependency org="bundledPlugin" name="com.intellij.java-i18n" rev="IU-252.23892.409"/>
+    <dependency org="bundledPlugin" name="com.intellij.properties" rev="IU-252.23892.409"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.ultimate" rev="IU-252.23892.409"/>
+  </dependencies>
+</ivy-module>

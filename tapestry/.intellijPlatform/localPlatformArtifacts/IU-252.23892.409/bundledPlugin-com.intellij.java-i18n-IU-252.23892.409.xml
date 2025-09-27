@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.java-i18n" revision="IU-252.23892.409"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="java-i18n" ext="jar" conf="default" url="plugins/java-i18n/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.properties" rev="IU-252.23892.409"/>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="IU-252.23892.409"/>
+  </dependencies>
+</ivy-module>

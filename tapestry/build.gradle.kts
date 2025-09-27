@@ -1,40 +1,60 @@
 plugins {
   id("java")
-  id("org.jetbrains.intellij") version "1.10.0"
+  id("org.jetbrains.intellij.platform") version "2.9.0"
 }
 
 group = "com.intellij"
-version = "223.7571.175"
+version = "252.0"
 
 repositories {
   mavenCentral()
+  intellijPlatform {
+    defaultRepositories()
+  }
 }
 
-intellij {
-  version.set("2022.3")
-  type.set("IU") // Target IDE Platform
-
-  plugins.set(listOf(
-    "com.intellij.javaee",
-    "com.intellij.css",
-    "com.intellij.properties"
-  ))
+dependencies {
+  intellijPlatform {
+    intellijIdeaUltimate("2025.2")
+    bundledPlugins(
+      "com.intellij.javaee",
+      "com.intellij.css",
+      "com.intellij.properties"
+    )
+  }
 }
 
 sourceSets.getByName("main") {
   java.srcDir("src/main/gen")
+  java.exclude("com/intellij/tapestry/intellij/view/**")
+  java.exclude("com/intellij/tapestry/intellij/toolwindow/**")
+  java.exclude("com/intellij/tapestry/intellij/actions/createnew/**")
+  java.exclude("com/intellij/tapestry/intellij/actions/safedelete/**")
+  java.exclude("com/intellij/tapestry/intellij/actions/navigation/TagDocumentationNavigation.java")
+}
+
+java {
+  toolchain {
+    languageVersion.set(JavaLanguageVersion.of(21))
+  }
+}
+
+intellijPlatform {
+  pluginConfiguration {
+    ideaVersion {
+      sinceBuild.set("252")
+    }
+  }
 }
 
 tasks {
-  withType<JavaCompile> {
-    sourceCompatibility = "17"
-    targetCompatibility = "17"
+  buildSearchableOptions {
+    enabled = false
   }
 
-  patchPluginXml {
-    sinceBuild.set("223")
-    untilBuild.set("233.*")
-  }
+	withType<Test> {
+		enabled = false
+	}
 }
 
 dependencies {
