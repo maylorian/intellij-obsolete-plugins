@@ -67,7 +67,27 @@
   </extensions>
 
   <actions>
-    <!-- navigation and creation actions temporarily disabled for compatibility migration -->
+    <action class="com.intellij.tapestry.intellij.actions.navigation.ClassTemplateNavigation"
+            id="ClassTemplateNavigation" text="Class &lt;-&gt; Template Navigation"
+            description="Navigate between class and TML template.">
+      <keyboard-shortcut first-keystroke="control shift G" keymap="$default"/>
+    </action>
+
+    <group id="GoToTapestryTemplate"
+           class="com.intellij.tapestry.intellij.actions.navigation.TemplatesNavigation"
+           text="Tapestry Template" description="Go to template." popup="true">
+      <add-to-group group-id="EditorPopupMenu.GoTo" anchor="last"/>
+    </group>
+
+    <group id="GoToTapestryClass">
+      <separator/>
+      <action id="GoToClass"
+              class="com.intellij.tapestry.intellij.actions.navigation.ClassTemplateNavigation"
+              text="Tapestry Class" description="Go to class.">
+        <keyboard-shortcut first-keystroke="control shift G" keymap="$default"/>
+      </action>
+      <add-to-group group-id="EditorPopupMenu.GoTo" anchor="last"/>
+    </group>
   </actions>
 
   <projectListeners>
